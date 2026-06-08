@@ -5,13 +5,11 @@ from pymongo.server_api import ServerApi
 import certifi
 import time
 from datetime import datetime
-from dotenv import load_dotenv
-import os
+import streamlit as st
 
-load_dotenv()
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+MONGODB_URI = st.secrets["MONGODB_URI"]
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-MONGODB_URI = os.getenv("MONGODB_URI")
 
 mongo_client = MongoClient(
     MONGODB_URI,
