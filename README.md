@@ -14,8 +14,7 @@ An AI-powered study coach built with:
 - Analyze learning progress
 - Recommend next problems to solve
 
-## Tryout link
-Still working on demo version
+## Demo Link
 https://leetcode-coach-agent-knu6jdmuswwcms6dy5fpbh.streamlit.app/ 
 
 ## How it works
