@@ -24,7 +24,29 @@ client = genai.Client(
     api_key=GEMINI_API_KEY
 )
 
-st.title("LeetCode Coach Agent")
+GEMINI_LOGO = (
+    "https://developers.google.com/static/focus/images/"
+    "gemini-icon-2025_1440.png"
+)
+
+# Page configuration
+st.set_page_config(
+    page_title="Gemini LeetCode Coach",
+    page_icon="✨",
+    layout="wide",
+)
+
+# Header
+logo_col, title_col = st.columns([1, 6], vertical_alignment="center")
+
+with logo_col:
+    st.image(GEMINI_LOGO, width=80)
+
+with title_col:
+    st.title("LeetCode Coach")
+    st.caption("Your personal AI coding mentor, powered by Google Gemini")
+
+st.divider()
 
 problem = st.text_input(
     "Enter a LeetCode problem"
