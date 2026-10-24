@@ -29,22 +29,42 @@ GEMINI_LOGO = (
     "gemini-icon-2025_1440.png"
 )
 
+
 # Page configuration
 st.set_page_config(
     page_title="Gemini LeetCode Coach",
     page_icon="✨",
-    layout="wide",
+    layout="centered",
 )
 
-# Header
-logo_col, title_col = st.columns([1, 6], vertical_alignment="center")
+# Custom styling
+st.markdown("""
+<style>
+    .block-container {
+        max-width: 760px;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    [data-testid="stImage"] img {
+        object-fit: contain;
+    }
+
+    h1 {
+        padding-bottom: 0;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# Compact header
+logo_col, title_col = st.columns([1, 5], vertical_alignment="center")
 
 with logo_col:
-    st.image(GEMINI_LOGO, width=80)
+    st.image(GEMINI_LOGO, width=56)
 
 with title_col:
     st.title("LeetCode Coach")
-    st.caption("Your personal AI coding mentor, powered by Google Gemini")
+    st.caption("Your personal AI coding mentor · Powered by Gemini")
 
 st.divider()
 
